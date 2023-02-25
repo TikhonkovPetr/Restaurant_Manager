@@ -67,6 +67,9 @@
     <Compile Include="CreateObject\CreateWaiter.xaml.cs">
       <DependentUpon>CreateWaiter.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CreateObject\DellTable.xaml.cs">
+      <DependentUpon>DellTable.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CreateObject\Privase.xaml.cs">
       <DependentUpon>Privase.xaml</DependentUpon>
     </Compile>
@@ -103,6 +106,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CreateObject\CreateWaiter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateObject\DellTable.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
