@@ -83,6 +83,7 @@ namespace Restauran_Manager_WPF.RedZakaz_Bluda
             {
                 MenuZal.tables[RedZakaz.index].Order = dish;
                 MenuZal.tables[RedZakaz.index].waiter = (Restaurant_Manager.Waiter)ComBox_Waiters.SelectedItem;
+                Waiters.waiters[ComBox_Waiters.SelectedIndex].Worked_days += 1;
                 RedZakaz redZakaz = new RedZakaz();
                 redZakaz.Show();
                 this.Close();

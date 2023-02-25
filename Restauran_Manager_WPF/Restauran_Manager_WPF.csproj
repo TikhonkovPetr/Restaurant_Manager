@@ -58,6 +58,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CreateObject\CreateTable.xaml.cs">
+      <DependentUpon>CreateTable.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MenuBlud.xaml.cs">
       <DependentUpon>MenuBlud.xaml</DependentUpon>
     </Compile>
@@ -79,6 +82,10 @@
     <Compile Include="Waiters.xaml.cs">
       <DependentUpon>Waiters.xaml</DependentUpon>
     </Compile>
+    <Page Include="CreateObject\CreateTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

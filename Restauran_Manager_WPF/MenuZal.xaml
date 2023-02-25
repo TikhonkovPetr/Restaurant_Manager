@@ -11,6 +11,7 @@
         <DataGrid x:Name="Data_Table" AutoGenerateColumns="True" Margin="50,45,50,110">
         </DataGrid>
         <Button Content="Назад" HorizontalAlignment="Left" Margin="30,329,0,0" VerticalAlignment="Top" Height="65" Width="120" FontSize="20" Click="Button_Click_Back"/>
+        <Button Content="Добавить столик" HorizontalAlignment="Left" Margin="611,329,0,0" VerticalAlignment="Top" Height="65" Width="164" FontSize="20" Click="Button_Click_AddTable"/>
         <Label Content="Меню столов" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="30" Width="130" FontSize="18"/>
     </Grid>
 </Window>

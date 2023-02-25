@@ -13,6 +13,7 @@ using System.Windows.Markup.Localizer;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Restauran_Manager_WPF.CreateObject;
 using Restaurant_Manager;
 
 namespace Restauran_Manager_WPF
@@ -29,9 +30,9 @@ namespace Restauran_Manager_WPF
         {
             InitializeComponent();
             //Открытие файла с сохранением столов
-            for (int i = 0; i <= 3; ++i)
+            for (int i = 0; i <= 4; ++i)
             {
-                CreateTable(i);
+                CreateTabl(i);
             }
             int summ=0;
             for(int i=0;i< tables.Count();i++)
@@ -52,7 +53,7 @@ namespace Restauran_Manager_WPF
                 Data_Table.Items.Add(tables[i]);
             }
         }
-        public void CreateTable(int i)
+        public void CreateTabl(int i)
         {
             var column = new DataGridTextColumn();
             switch (i)
@@ -77,6 +78,11 @@ namespace Restauran_Manager_WPF
                     column.Binding = new Binding("Busy");
                     Data_Table.Columns.Add(column);
                     break;
+                case 4:
+                    column.Header = "Официант";
+                    column.Binding = new Binding("waiter.Name");
+                    Data_Table.Columns.Add(column);
+                    break;
             }
         }
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -87,6 +93,13 @@ namespace Restauran_Manager_WPF
         private void Button_Click_Back(object sender, RoutedEventArgs e)
         {
             MainWindow window = new MainWindow();
+            window.Show();
+            this.Close();
+        }
+
+        private void Button_Click_AddTable(object sender, RoutedEventArgs e)
+        {
+            CreateTable window = new CreateTable();
             window.Show();
             this.Close();
         }

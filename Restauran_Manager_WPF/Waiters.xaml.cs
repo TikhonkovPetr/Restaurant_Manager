@@ -61,7 +61,7 @@ namespace Restauran_Manager_WPF
                     Data_Waiter.Columns.Add(column);
                     break;
                 case 4:
-                    column.Header = "Дней проработал";
+                    column.Header = "Столиков обслужил";
                     column.Binding = new Binding("Worked_days");
                     Data_Waiter.Columns.Add(column);
                     break;
