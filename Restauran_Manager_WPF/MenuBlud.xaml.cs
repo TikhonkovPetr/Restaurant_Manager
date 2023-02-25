@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Restauran_Manager_WPF.CreateObject;
+using Restauran_Manager_WPF.RedZakaz_Bluda;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +21,7 @@ namespace Restauran_Manager_WPF
     /// </summary>
     public partial class MenuBlud : Window
     {
+        public static int index_dish;
         public static List<Restaurant_Manager.Dish> Dishes = new List<Restaurant_Manager.Dish> { new Restaurant_Manager.Dish { Id = 1, Name = "Кола", Cost = 79 }, new Restaurant_Manager.Dish { Id = 2, Name = "Ягодный пирог", Cost = 99 }, new Restaurant_Manager.Dish { Id = 3, Name = "Спагети", Cost = 59 } };
         public MenuBlud()
         {
@@ -60,6 +63,32 @@ namespace Restauran_Manager_WPF
             MainWindow window = new MainWindow();
             window.Show();
             this.Close();
+        }
+
+        private void Button_Click_Add(object sender, RoutedEventArgs e)
+        {
+            CreateBludo createBludo = new CreateBludo();
+            createBludo.Show();
+            this.Close();
+        }
+
+        private void Button_Click_Dell(object sender, RoutedEventArgs e)
+        {
+            if(Data_Dish.SelectedItem!=null)
+            {
+                index_dish = Data_Dish.SelectedIndex;
+                Privase privase = new Privase();
+                privase.ShowDialog();
+                Data_Dish.Items.Clear();
+                for (int i = 0; i < Dishes.Count(); ++i)
+                {
+                    Data_Dish.Items.Add(Dishes[i]);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Элемент для удаления не выбран", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
     }
 }

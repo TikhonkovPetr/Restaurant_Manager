@@ -7,9 +7,10 @@
         mc:Ignorable="d"
         Title="MenuBlud" Height="600" Width="800">
     <Grid>
-        <DataGrid x:Name="Data_Dish" AutoGenerateColumns="True" Margin="200,45,200,40" FontSize="18"/>
+        <DataGrid x:Name="Data_Dish" AutoGenerateColumns="True" Margin="170,45,230,40" FontSize="18"/>
         <Button Content="Назад" HorizontalAlignment="Left" Margin="10,479,0,0" VerticalAlignment="Top" Height="65" Width="120" FontSize="20" Click="Button_Click_Back"/>
-        <Label Content="Меню ресторана" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="40" Width="180" FontSize="20"/>
-
+        <Label Content="Меню ресторана" HorizontalAlignment="Left" Margin="280,10,0,0" VerticalAlignment="Top" Height="40" Width="180" FontSize="20"/>
+        <Button Content="Добавить блюдо" HorizontalAlignment="Left" Margin="600,479,0,0" VerticalAlignment="Top" Height="65" Width="160" FontSize="20" Click="Button_Click_Add"/>
+        <Button Content="Удалить блюдо" HorizontalAlignment="Left" Margin="600,384,0,0" VerticalAlignment="Top" Height="65" Width="160" FontSize="20" Click="Button_Click_Dell"/>
     </Grid>
 </Window>
