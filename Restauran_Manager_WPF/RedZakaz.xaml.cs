@@ -32,10 +32,6 @@ namespace Restauran_Manager_WPF
             {
                 CreateTable(i);
             }
-            for(int i=0;i<8;i++)
-            {
-                Data_Zakaz.Items.Add(new Dish());
-            }
 
         }
         public void CreateTable(int i)
@@ -104,6 +100,8 @@ namespace Restauran_Manager_WPF
         {
             if (prow)
             {
+                Data_Zakaz.Items.Clear();
+                prow = false;
                 ClearTable clearTable = new ClearTable();
                 clearTable.ShowDialog();
             }
