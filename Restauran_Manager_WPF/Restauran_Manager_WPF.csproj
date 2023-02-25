@@ -85,7 +85,7 @@
     <Compile Include="RedZakaz_Bluda\ClearTable.xaml.cs">
       <DependentUpon>ClearTable.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CreateObject\DellBludo.xaml.cs">
+    <Compile Include="RedZakaz_Bluda\DellBludo.xaml.cs">
       <DependentUpon>DellBludo.xaml</DependentUpon>
     </Compile>
     <Compile Include="RedZakaz_Bluda\DellWaiter.xaml.cs">
@@ -149,7 +149,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CreateObject\DellBludo.xaml">
+    <Page Include="RedZakaz_Bluda\DellBludo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
