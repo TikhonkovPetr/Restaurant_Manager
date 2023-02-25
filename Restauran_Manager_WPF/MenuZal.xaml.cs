@@ -103,5 +103,10 @@ namespace Restauran_Manager_WPF
             window.Show();
             this.Close();
         }
+
+        private void Button_Click_Dell(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
