@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Restauran_Manager_WPF.CreateObject;
+using Restauran_Manager_WPF.RedZakaz_Bluda;
+using Restaurant_Manager;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -20,6 +23,7 @@ namespace Restauran_Manager_WPF
     /// </summary>
     public partial class Waiters : Window
     {
+        public static int index_waiter;
         public static List<Restaurant_Manager.Waiter> waiters = new List<Restaurant_Manager.Waiter> { new Restaurant_Manager.Waiter { Id = 1, Name = "Tom", Salary_per_day = 37000, Device_date = new DateTime(2021, 12, 20), Worked_days = 487 }, new Restaurant_Manager.Waiter { Id = 2, Name = "Gary", Salary_per_day = 30000, Device_date = new DateTime(2022, 1, 12), Worked_days = 120 }, new Restaurant_Manager.Waiter { Id = 3, Name = "Clam", Salary_per_day = 28000, Device_date = new DateTime(2022, 8, 11), Worked_days = 23 } };
         public Waiters()
         {
@@ -72,6 +76,32 @@ namespace Restauran_Manager_WPF
             MainWindow window = new MainWindow();
             window.Show();
             this.Close();
+        }
+
+        private void Button_Click_Add(object sender, RoutedEventArgs e)
+        {
+            CreateWaiter createWaiter = new CreateWaiter();
+            createWaiter.Show();
+            this.Close();
+        }
+
+        private void Button_Click_Dell(object sender, RoutedEventArgs e)
+        {
+            if(Data_Waiter.SelectedItem!=null)
+            {
+                index_waiter = Data_Waiter.SelectedIndex;
+                DellWaiter privase = new DellWaiter();
+                privase.ShowDialog();
+                Data_Waiter.Items.Clear();
+                for (int i = 0; i < waiters.Count(); ++i)
+                {
+                    Data_Waiter.Items.Add(waiters[i]);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Элемент для удаления не выбран", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
     }
 }

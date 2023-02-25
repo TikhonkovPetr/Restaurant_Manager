@@ -64,6 +64,9 @@
     <Compile Include="CreateObject\CreateTable.xaml.cs">
       <DependentUpon>CreateTable.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CreateObject\CreateWaiter.xaml.cs">
+      <DependentUpon>CreateWaiter.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CreateObject\Privase.xaml.cs">
       <DependentUpon>Privase.xaml</DependentUpon>
     </Compile>
@@ -79,8 +82,11 @@
     <Compile Include="RedZakaz_Bluda\ClearTable.xaml.cs">
       <DependentUpon>ClearTable.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RedZakaz_Bluda\DellBludo.xaml.cs">
+    <Compile Include="CreateObject\DellBludo.xaml.cs">
       <DependentUpon>DellBludo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RedZakaz_Bluda\DellWaiter.xaml.cs">
+      <DependentUpon>DellWaiter.xaml</DependentUpon>
     </Compile>
     <Compile Include="RedZakaz_Bluda\NewZak.xaml.cs">
       <DependentUpon>NewZak.xaml</DependentUpon>
@@ -93,6 +99,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CreateObject\CreateTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateObject\CreateWaiter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,7 +142,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RedZakaz_Bluda\DellBludo.xaml">
+    <Page Include="CreateObject\DellBludo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RedZakaz_Bluda\DellWaiter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
