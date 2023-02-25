@@ -1,0 +1,15 @@
+﻿<Window x:Class="Restauran_Manager_WPF.MenuBlud"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Restauran_Manager_WPF"
+        mc:Ignorable="d"
+        Title="MenuBlud" Height="600" Width="800">
+    <Grid>
+        <DataGrid x:Name="Data_Dish" AutoGenerateColumns="True" Margin="200,45,200,40" FontSize="18"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="10,479,0,0" VerticalAlignment="Top" Height="65" Width="120" FontSize="20" Click="Button_Click_Back"/>
+        <Label Content="Меню ресторана" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="40" Width="180" FontSize="20"/>
+
+    </Grid>
+</Window>
