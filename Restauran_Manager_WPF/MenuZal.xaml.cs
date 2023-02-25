@@ -23,6 +23,7 @@ namespace Restauran_Manager_WPF
     /// </summary>
     public partial class MenuZal : Window
     {
+        public static int index_tab;
         public static List<Dish> Order1 = new List<Dish> { MenuBlud.Dishes[1], MenuBlud.Dishes[2] };
         public static List<Dish> Order2 = new List<Dish> { MenuBlud.Dishes[0], MenuBlud.Dishes[1], MenuBlud.Dishes[2] };
         public static List<Restaurant_Manager.Table> tables = new List<Restaurant_Manager.Table> { new Restaurant_Manager.Table { Id = 1, Places = 4, Total_cost = 0, Order = Order1, Busy = false, waiter = null }, new Restaurant_Manager.Table { Id = 2, Places = 5, Total_cost = 0, Order = Order2, Busy = false, waiter = null } };
@@ -106,7 +107,21 @@ namespace Restauran_Manager_WPF
 
         private void Button_Click_Dell(object sender, RoutedEventArgs e)
         {
-            
+            if (Data_Table.SelectedItem != null)
+            {
+                index_tab = Data_Table.SelectedIndex;
+                DellTable privase = new DellTable();
+                privase.ShowDialog();
+                Data_Table.Items.Clear();
+                for (int i = 0; i < tables.Count(); ++i)
+                {
+                    Data_Table.Items.Add(tables[i]);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Элемент для удаления не выбран", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
     }
 }

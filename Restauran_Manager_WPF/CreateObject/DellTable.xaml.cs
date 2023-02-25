@@ -26,12 +26,17 @@ namespace Restauran_Manager_WPF.CreateObject
 
         private void Button_Yes(object sender, RoutedEventArgs e)
         {
-
+            MenuZal.tables.Remove(MenuZal.tables[MenuZal.index_tab]);
+            for (int i = 1; i <= MenuZal.tables.Count; i++)
+            {
+                MenuZal.tables[i - 1].Id = i;
+            }
+            this.Close();
         }
 
         private void Button_No(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }
