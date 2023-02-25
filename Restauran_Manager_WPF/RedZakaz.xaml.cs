@@ -22,7 +22,8 @@ namespace Restauran_Manager_WPF
     public partial class RedZakaz : Window
     {
         public static int reserw;
-        bool prow = false;
+        public static bool prow = false;
+        public static int index;
         public RedZakaz()
         {
             InitializeComponent();
@@ -32,7 +33,6 @@ namespace Restauran_Manager_WPF
             {
                 CreateTable(i);
             }
-
         }
         public void CreateTable(int i)
         {
@@ -104,6 +104,28 @@ namespace Restauran_Manager_WPF
                 prow = false;
                 ClearTable clearTable = new ClearTable();
                 clearTable.ShowDialog();
+            }
+        }
+
+        private void Button_Click_Create(object sender, RoutedEventArgs e)
+        {
+            if (prow)
+            {
+                if (!MenuZal.tables[List_Table.SelectedIndex].Busy)
+                {
+                    NewZak newZak = new NewZak();
+                    index = List_Table.SelectedIndex;
+                    newZak.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Столик занят", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Столик не выбран","Ошибка",MessageBoxButton.OK,MessageBoxImage.Warning);
             }
         }
     }

@@ -17,6 +17,7 @@
         <Button Content="Добавить блюдо" HorizontalAlignment="Left" Margin="610,115,0,0" VerticalAlignment="Top" Height="65" Width="180" FontSize="20" Click="Button_Click_Add"/>
         <Button Content="Удалить блюдо" HorizontalAlignment="Left" Margin="610,217,0,0" VerticalAlignment="Top" Height="65" Width="180" FontSize="20" Click="Button_Click_Dell"/>
         <Button Content="Столик освободился" HorizontalAlignment="Left" Margin="574,342,0,0" VerticalAlignment="Top" Height="64" Width="200" FontSize="20" Click="Button_Click_Creal"/>
+        <Button Content="Новый заказ" HorizontalAlignment="Left" Margin="549,10,0,0" VerticalAlignment="Top" Height="64" Width="200" FontSize="20" Click="Button_Click_Create"/>
         <Label Content="Изменить" HorizontalAlignment="Left" Margin="654,64,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.217,0.022" Height="36" Width="120" FontSize="20"/>
     </Grid>
 </Window>

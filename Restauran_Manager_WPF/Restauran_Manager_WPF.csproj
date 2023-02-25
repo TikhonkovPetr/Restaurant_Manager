@@ -73,6 +73,9 @@
     <Compile Include="RedZakaz_Bluda\DellBludo.xaml.cs">
       <DependentUpon>DellBludo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RedZakaz_Bluda\NewZak.xaml.cs">
+      <DependentUpon>NewZak.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Waiters.xaml.cs">
       <DependentUpon>Waiters.xaml</DependentUpon>
     </Compile>
@@ -109,6 +112,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RedZakaz_Bluda\DellBludo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RedZakaz_Bluda\NewZak.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
