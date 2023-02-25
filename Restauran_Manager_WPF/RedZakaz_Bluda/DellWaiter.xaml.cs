@@ -31,6 +31,13 @@ namespace Restauran_Manager_WPF.RedZakaz_Bluda
 
         private void Button_Yes(object sender, RoutedEventArgs e)
         {
+            for (int i = 0; i < MenuZal.tables.Count; i++)
+            {
+                if (MenuZal.tables[i].waiter== Waiters.waiters[Waiters.index_waiter])
+                {
+                    MenuZal.tables[i].waiter = new Restaurant_Manager.Waiter();
+                }
+            }
             Waiters.waiters.Remove(Waiters.waiters[Waiters.index_waiter]);
             for (int i = 1; i <= Waiters.waiters.Count; i++)
             {
